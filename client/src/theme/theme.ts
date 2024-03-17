@@ -12,6 +12,7 @@ export const lightTheme: ThemeOptions = {
             primary: '#000',
         },
     },
+    spacing: 4,
 };
 
 export const darkTheme: ThemeOptions = {
@@ -25,4 +26,5 @@ export const darkTheme: ThemeOptions = {
             primary: '#fff',
         },
     },
+    spacing: 4,
 };
