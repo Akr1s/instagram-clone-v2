@@ -1,5 +1,11 @@
-function App() {
-    return <h6>Instagram clone v2</h6>;
-}
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import UserContextProvider from './contexts/user';
 
-export default App;
+export default function App() {
+    return (
+        <UserContextProvider>
+            <RouterProvider router={router} />
+        </UserContextProvider>
+    );
+}
