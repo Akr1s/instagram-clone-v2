@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { VerifyCallback, verify } from 'jsonwebtoken';
+import { verify } from 'jsonwebtoken';
 import dotenv from 'dotenv';
 
 dotenv.config();

@@ -1,13 +1,12 @@
 import { axiosInstance } from '../../api/axios';
-import { IUser } from '../../interfaces/user.interface';
 import { ISignInForm, ISignUpForm } from './auth.type';
 
 export class AuthService {
-    public static signIn(values: ISignInForm): Promise<IUser> {
+    public static signIn(values: ISignInForm): Promise<void> {
         const url = 'auth/signin';
         const data = values;
 
-        return axiosInstance.post(url, data).then((res) => res.data);
+        return axiosInstance.post(url, data);
     }
 
     public static signUp(values: ISignUpForm): Promise<void> {

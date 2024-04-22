@@ -47,7 +47,7 @@ const signIn = async (req: Request, res: Response) => {
 
         req.session!.token = token;
 
-        return res.status(200).send(user);
+        return res.status(200).send('Successful login');
     } catch (error) {
         return res.status(500).send({
             message: 'Server got itself in trouble. Unable to sign in!',

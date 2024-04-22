@@ -10,7 +10,6 @@ import { ISignInForm } from './auth.type';
 import { AuthService } from './auth.service';
 import { useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
-import { useUserContext } from '../../contexts/user/use-user-context.hook';
 
 const classes = {
     root: {
@@ -41,17 +40,13 @@ export default function Login() {
         validationSchema,
         onSubmit: () => null,
     });
-    const { setUser } = useUserContext();
 
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
     const handleSubmit = (): void => {
         setIsSubmitting(true);
         AuthService.signIn(values)
-            .then((user) => {
-                setUser(user);
-                navigate('/');
-            })
+            .then(() => navigate('/'))
             .finally(() => setIsSubmitting(false));
     };
 
