@@ -1,8 +1,8 @@
-import { ThemeProvider } from '@emotion/react';
 import React, { createContext, useMemo, useState } from 'react';
 import { darkTheme, lightTheme } from './theme';
 import { ThemeModesEnum } from '../enums/theme-modes.enum';
-import { createTheme } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
 interface IProps {
     children: React.ReactElement;

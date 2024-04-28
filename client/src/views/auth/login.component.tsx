@@ -7,7 +7,7 @@ import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { object, string } from 'yup';
 import { ISignInForm } from './auth.type';
-import { AuthService } from './auth.service';
+import { AuthService } from '../../services/auth.service';
 import { useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -46,7 +46,7 @@ export default function Login() {
     const handleSubmit = (): void => {
         setIsSubmitting(true);
         AuthService.signIn(values)
-            .then(() => navigate('/'))
+            .then(() => navigate('/feed'))
             .finally(() => setIsSubmitting(false));
     };
 

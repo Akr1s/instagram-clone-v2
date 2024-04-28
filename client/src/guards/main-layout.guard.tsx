@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useUserContext } from '../contexts/user/use-user-context.hook';
 import { Navigate } from 'react-router-dom';
 import { CurrentUserService } from '../services/current-user.service';
-import { Box, CircularProgress } from '@mui/material';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 
 interface IProps {
     children: React.ReactElement;
@@ -30,7 +31,7 @@ export default function MainLayoutGuard({ children }: IProps) {
     }, []);
 
     return (
-        <Box sx={{ width: '100vw', height: '100vh', position: 'relative' }}>
+        <Box sx={{ width: '100vw', minHeight: '100vh', position: 'relative' }}>
             {isLoading ? (
                 <CircularProgress sx={classes.centered} />
             ) : user ? (

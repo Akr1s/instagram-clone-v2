@@ -1,5 +1,5 @@
-import { axiosInstance } from '../../api/axios';
-import { ISignInForm, ISignUpForm } from './auth.type';
+import { axiosInstance } from '../api/axios';
+import { ISignInForm, ISignUpForm } from '../views/auth/auth.type';
 
 export class AuthService {
     public static signIn(values: ISignInForm): Promise<void> {

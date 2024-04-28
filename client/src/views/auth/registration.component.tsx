@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { object, string } from 'yup';
 import { ISignUpForm } from './auth.type';
 import { useState } from 'react';
-import { AuthService } from './auth.service';
+import { AuthService } from '../../services/auth.service';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const classes = {

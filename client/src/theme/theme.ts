@@ -10,6 +10,7 @@ export const lightTheme: ThemeOptions = {
         },
         text: {
             primary: '#000',
+            secondary: '#666',
         },
     },
     spacing: 4,
